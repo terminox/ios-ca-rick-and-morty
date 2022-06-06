@@ -1,0 +1,32 @@
+query Characters($page: Int!) {
+  characters(page: $page) {
+    info {
+      count
+      pages
+      next
+      prev
+    }
+    
+    results {
+      id
+      name
+      status
+      type
+      gender
+      species
+      image
+      origin {
+        id
+        name
+        type
+        dimension
+      }
+      location {
+        id
+        name
+        type
+        dimension
+      }
+    }
+  }
+}

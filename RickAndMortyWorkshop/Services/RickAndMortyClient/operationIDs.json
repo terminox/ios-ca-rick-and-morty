@@ -1,0 +1,14 @@
+{
+  "caeae9bfc0cc8a4fe2a99e6c2cd60359348fc2e1d5513c933e86e9ad845bec93": {
+    "name": "Characters",
+    "source": "query Characters($page: Int!) {\n  characters(page: $page) {\n    __typename\n    info {\n      __typename\n      count\n      pages\n      next\n      prev\n    }\n    results {\n      __typename\n      id\n      name\n      status\n      type\n      gender\n      species\n      image\n      origin {\n        __typename\n        id\n        name\n        type\n        dimension\n      }\n      location {\n        __typename\n        id\n        name\n        type\n        dimension\n      }\n    }\n  }\n}"
+  },
+  "41cab74d74fc1e129092d65a78460e0aa3daf890b94505cbe63f38dc7cc25145": {
+    "name": "Episodes",
+    "source": "query Episodes($page: Int!) {\n  episodes(page: $page) {\n    __typename\n    info {\n      __typename\n      count\n      pages\n      next\n      prev\n    }\n    results {\n      __typename\n      id\n      name\n      air_date\n      episode\n      characters {\n        __typename\n        id\n        name\n        status\n        type\n        gender\n        species\n        image\n      }\n    }\n  }\n}"
+  },
+  "9b878dd3e9fea64e8ceca9f6a9bc5634da277e25f3824070a74448c31108f790": {
+    "name": "Locations",
+    "source": "query Locations($page: Int!) {\n  locations(page: $page) {\n    __typename\n    info {\n      __typename\n      count\n      pages\n      next\n      prev\n    }\n    results {\n      __typename\n      id\n      name\n      type\n      dimension\n      residents {\n        __typename\n        id\n        name\n        status\n        type\n        gender\n        species\n        image\n      }\n    }\n  }\n}"
+  }
+}
